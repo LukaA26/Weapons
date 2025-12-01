@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://caslpeiw67uj8"]
+
+[ext_resource type="Script" uid="uid://b502xopfyvu7r" path="res://bigbutton.gd" id="1_x77ku"]
+[ext_resource type="Texture2D" uid="uid://dtwlkbhgiy5fm" path="res://102-1022546_easy-the-big-red-button-big-red-button (2).png" id="1_xssj0"]
+[ext_resource type="Texture2D" uid="uid://cpk1nbeb2l4go" path="res://102-1022546_easy-the-big-red-button-big-red-button (1) copy.png" id="2_x77ku"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xssj0"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.80261576, 0.80261636, 0.802616, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2pjop"]
+texture = ExtResource("1_xssj0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xssj0"]
+texture = ExtResource("2_x77ku")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqo52"]
+texture = ExtResource("1_xssj0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x77ku"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x77ku"]
+font_size = 31
+
+[sub_resource type="GDScript" id="GDScript_2pjop"]
+script/source = "extends Label
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x77ku")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -3.0517578e-05
+offset_right = 1855.2039
+offset_bottom = 1134.6334
+scale = Vector2(0.620956, 0.5781603)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xssj0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 64.0
+offset_right = 336.0
+offset_bottom = 72.0
+scale = Vector2(55.48906, 55.48906)
+theme_override_styles/normal = SubResource("StyleBoxTexture_2pjop")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xssj0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cqo52")
+
+[node name="TextEdit" type="Label" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 544.0
+offset_right = 808.0
+offset_bottom = 624.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_x77ku")
+text = "Presses needed:"
+label_settings = SubResource("LabelSettings_x77ku")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = SubResource("GDScript_2pjop")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
