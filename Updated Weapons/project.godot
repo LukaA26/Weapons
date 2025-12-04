@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="weapons"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="uid://o40kdo2lpq4i"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SpaceApi="*res://space_api (1).gd"
+Allbuttons="*res://allbuttons.gd"
 
 [display]
 

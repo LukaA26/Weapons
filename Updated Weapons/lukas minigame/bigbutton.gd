@@ -29,4 +29,5 @@ func end_game() -> void:
 	print('Neel')
 	var	scene = load(main)
 	get_tree().change_scene_to_packed(scene)
+	Allbuttons.buttons_enabled = true
 	game_finished = true
