@@ -1,0 +1,121 @@
+[gd_scene load_steps=12 format=3 uid="uid://o40kdo2lpq4i"]
+
+[ext_resource type="Script" uid="uid://cm0ldkr8m5vu7" path="res://node_2d.gd" id="1_rj586"]
+[ext_resource type="Texture2D" uid="uid://dli8mhfujprc0" path="res://Screenshot 2025-11-27 at 9.00.52 am.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bfy6xyfegjwbj" path="res://Screenshot 2025-11-27 at 9.01.12 am.png" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://jpoxg6rfcafb" path="res://laser.gd" id="2_d21ai"]
+[ext_resource type="Texture2D" uid="uid://mvnc17ksxprh" path="res://Screenshot 2025-11-27 at 9.30.24 am.png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://c8sq3vfjhakn6" path="res://Screenshot 2025-11-28 at 2.46.23 pm.png" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://bhe6f8udvwf1g" path="res://missile.gd" id="4_rj586"]
+[ext_resource type="Script" uid="uid://exhh63k3ntmh" path="res://minigamebutton.gd" id="5_q6r6c"]
+[ext_resource type="Script" uid="uid://elciosjbf0sp" path="res://special_1.gd" id="7_ir8iy"]
+[ext_resource type="Script" uid="uid://c6bltqawuuebc" path="res://special_2.gd" id="8_hqns4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e48y"]
+draw_center = false
+corner_detail = 10
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rj586")
+
+[node name="border" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="border"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1144, 640, 1144, 640, 1144, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="border"]
+position = Vector2(-632, 0)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D3" type="Polygon2D" parent="border"]
+position = Vector2(-89856, 0)
+scale = Vector2(79, 0.012345679)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1151.5951, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D4" type="Polygon2D" parent="border"]
+position = Vector2(-88711.86, 640)
+scale = Vector2(77.99988, 0.012345679)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D5" type="Polygon2D" parent="border"]
+position = Vector2(-1144, 0)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1143.9999, 80.237076, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D6" type="Polygon2D" parent="border"]
+position = Vector2(-73216.5, 0)
+scale = Vector2(64.00045, 0.012345679)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1143.9999, 80.237076, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1147.9979, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Polygon2D7" type="Polygon2D" parent="border"]
+position = Vector2(-72064.66, 640)
+scale = Vector2(63.000572, 0.012345726)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1144, 8, 1143.9999, 80.237076, 1144, 227.10698, 1144, 640, 1144, 640, 1144, 648, 1152, 648, 1152, 0, 1144, 0)
+
+[node name="Laser" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 440.0
+offset_right = 406.0
+offset_bottom = 826.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e48y")
+icon = ExtResource("1_wtcfe")
+script = ExtResource("2_d21ai")
+
+[node name="Missile" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 440.0
+offset_right = 686.0
+offset_bottom = 812.0
+scale = Vector2(0.53, 0.53)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e48y")
+icon = ExtResource("2_0e48y")
+script = ExtResource("4_rj586")
+
+[node name="Craft special 1" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 439.99997
+offset_right = 478.0
+offset_bottom = 694.0
+rotation = 3.1415927
+scale = Vector2(0.43, 0.43)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e48y")
+icon = ExtResource("3_epypp")
+script = ExtResource("7_ir8iy")
+
+[node name="Special 2" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 439.99997
+offset_right = 534.00006
+offset_bottom = 694.0
+rotation = 4.712389
+scale = Vector2(0.43, 0.43)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e48y")
+icon = ExtResource("3_epypp")
+script = ExtResource("8_hqns4")
+
+[node name="Screenshot20251128At2_46_23Pm" type="Sprite2D" parent="."]
+position = Vector2(11.749998, 13.999996)
+scale = Vector2(0.013934431, 0.032051288)
+texture = ExtResource("4_0hol4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 520.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 35
+text = "minigame"
+script = ExtResource("5_q6r6c")
+
+[connection signal="pressed" from="Laser" to="Laser" method="_on_pressed"]
+[connection signal="pressed" from="Missile" to="Missile" method="_on_pressed"]
+[connection signal="pressed" from="Craft special 1" to="Craft special 1" method="_on_pressed"]
+[connection signal="pressed" from="Special 2" to="Special 2" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
